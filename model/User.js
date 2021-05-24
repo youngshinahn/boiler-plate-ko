@@ -1,6 +1,6 @@
-const mongooes = require('mongoose')
+const mongoose = require('mongoose')
 
-const userSchema = mongooes.Schema({
+const userSchema = mongoose.Schema({
     name: {
         type: String,
         maxLength: 50
@@ -31,5 +31,5 @@ const userSchema = mongooes.Schema({
     }
 })
 
-const User = mongooes.model('User', userSchema) // userSchema를 하나의 모델 형태로 만듬
-module.exports = {} // 다른곳에서도 사용할 수 있게 exports
+const User = mongoose.model('User', userSchema) // userSchema를 하나의 모델 형태로 만듬
+module.exports = { User} // 다른곳에서도 사용할 수 있게 exports
